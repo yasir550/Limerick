@@ -1,0 +1,308 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+.container
+{
+    width: 100%;
+}
+.nav-bar
+{
+    width:100%;
+    height: 30vh;
+    background-image: linear-gradient(rgba(255,255,255,.98),rgba(255,255,255,.98)), url("images/logo.png");
+    background-size: 150% 150% ;
+    background-position-x: 50%;
+    background-position-y: 40%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.logo, .menu, .social{
+    width: 100%;
+}
+.logo{
+    display: grid;
+    align-items: center;
+    justify-items: end;
+}
+.logo img{
+    width: 80%;
+}
+.menu
+{ 
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; 
+}
+.menu>ul
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu>ul>li
+{
+    position: relative;
+}
+.active
+{
+    color: #FF3271;
+}
+.menu>ul>li>a
+{
+    color: black;
+    padding: 5px 10px;
+    /* background: #7F4DFF; */
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.menu>ul>li>a:hover
+{
+    color: #FF3271;
+    transition: .5s;
+}
+.menu>ul>li>ul
+{
+    visibility: hidden;
+    width: 200px;
+    top: 100%;
+    border: 3px solid #FF3271;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    z-index: 1;
+    /* transform: translateY(30px); */
+}
+.menu>ul>li>ul
+{
+    visibility: hidden;
+    width: 200px;
+    top: 100%;
+    border: 3px solid #FF3271;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    z-index: 1;
+    /* transform: translateY(30px); */
+}
+.menu>ul>li:hover .dropdown
+{
+    visibility: visible;
+}
+.dropdown>li
+{
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+}
+.menu>ul>li>ul>li>a
+{
+    font-size: 14px;
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+.menu>ul>li>ul>li::before
+{
+    position: absolute;
+    content: '';
+    background: #FF3271;
+    display: block;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.menu>ul>li>ul>li:hover::before
+{
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all .8s;
+    opacity: 0;
+    color: #FF3271;
+}
+.menu>ul>li>ul>li>a:hover
+{
+    color: #FF3271;
+    transition: all .5s;
+}
+.social
+{
+    width: 80%;
+}
+.social ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+.social ul li
+{
+    padding-right: 5%;
+}
+.social ul li a i 
+{
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    line-height: 1;
+    padding: 10px;
+    background: #FF3271;
+    border-radius: 50%;
+    color: white;
+}
+.social ul li a i:hover
+{
+    transform: rotate(360deg);
+    transition: .5s;
+}
+
+/* image carousel css */
+.image-carousel
+{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+}
+.carousel-box .overlay
+{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%; 
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     transform: rotateY(270deg) scale(.1);
+     box-sizing: border-box;
+    padding-left: 15%;
+    text-align: center;
+}
+.carousel-box .overlay-details >img
+
+{
+    position: absolute;
+    z-index: -1;
+    top: -7%;
+    left: 13%;
+    width: 35px;
+    height: 35px;
+}
+.carousel-box:hover .overlay
+{
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+    z-index: 2;
+    transition: all .9s;
+}
+.overlay-details
+{
+    width: 85%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 70%;
+    left: 7%;
+    opacity: 0;
+}
+.carousel-box:hover .overlay-details
+{
+    top: 45%;
+    left: 7%;
+    transition: all 2s;
+    transition-delay: .5s;
+    opacity: 1;
+}
+.carousel-box{
+    position: relative;
+    
+}
+.carousel-box img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer css */
+
+.footer
+{
+   display: grid;
+   height: 40vh;
+   grid-template-rows: repeat(3, 7vh);
+   justify-items: center;
+   align-content: center;
+   /* border: 1px solid; */
+}
+.logo1
+{
+    width: 30%;
+    display: flex;
+    justify-content:center ;
+}
+.logo1 img
+{
+    width: 40%;
+    height: 70%;
+}
+.icons
+{ 
+    width: 20%;
+    display: grid;
+    align-content: center; 
+}
+.icons ul
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: end; 
+}
+.icons ul li
+{
+    padding-right: 5px;
+}
+.icons ul li a i
+{ 
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    line-height: 1;
+    padding: 10px;
+    background: #FF3271;
+    border-radius: 50%;
+    color: white;
+    
+}
+.icons ul li a i:hover
+{
+    transform: rotate(360deg);
+    transition: all .5s;
+}
+.footer p
+{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

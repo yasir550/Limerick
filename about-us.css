@@ -1,0 +1,434 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+.container
+{
+    width: 100%;
+}
+.navbar
+{
+    width:100%;
+    height: 30vh;
+    background-image: linear-gradient(rgba(255,255,255,.98),rgba(255,255,255,.98)), url("images/logo.png");
+    background-size: 150% 150% ;
+    background-position-x: 50%;
+    background-position-y: 40%;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 3fr;
+    align-content: center;
+    justify-items: space-around;
+}
+.social
+{
+    width: 60%;
+}
+.social ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.social ul li
+{
+    padding-right: 5%;
+}
+.social ul li a i 
+{
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    line-height: 1;
+    padding: 10px;
+    background: #FF3271;
+    border-radius: 50%;
+    color: white;
+}
+.social ul li a i:hover
+{
+    transform: rotate(360deg);
+    transition: .5s;
+}
+.logo
+{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo img
+{
+    width: 60%;
+    
+}
+.menu
+{ 
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; 
+}
+.menu>ul
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu>ul>li
+{
+    position: relative;
+}
+.active
+{
+    color: #FF3271;
+}
+.menu>ul>li>a
+{
+    color: black;
+    padding: 5px 10px;
+    /* background: #7F4DFF; */
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.menu>ul>li>a:hover
+{
+    color: #FF3271;
+    transition: .5s;
+}
+.menu>ul>li>ul
+{
+    visibility: hidden;
+    width: 200px;
+    top: 100%;
+    border: 3px solid #FF3271;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    z-index: 1;
+    /* transform: translateY(30px); */
+}
+.menu>ul>li:hover .dropdown
+{
+    visibility: visible;
+}
+.dropdown>li
+{
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+}
+.menu>ul>li>ul>li>a
+{
+    font-size: 14px;
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+.menu>ul>li>ul>li::before
+{
+    position: absolute;
+    content: '';
+    background: #FF3271;
+    display: block;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.menu>ul>li>ul>li:hover::before
+{
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all .8s;
+    opacity: 0;
+    color: #FF3271;
+}
+.menu>ul>li>ul>li>a:hover
+{
+    color: #FF3271;
+    transition: all .5s;
+}
+/* header css */
+
+.header
+{
+    width: 100%;
+    height: 30ch;
+    background: #FAFAFA;
+    text-align: center;
+    line-height: 4.3;
+    position: relative;
+    z-index: 0;
+}
+.header>h1
+{
+    font-size: 4em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.header .fas
+{
+    font-size: 10em;
+    position: absolute;
+    top: 22%;
+    left: 36%;
+    z-index: -1;
+    color: #FFE991;
+}
+
+/* Main section css */
+
+.main
+{
+    width: 100%;
+    height: 130vh;
+    display: grid;
+    grid-template-columns: 46% 54%;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.main>img
+{
+    width: 40%;
+    position: absolute;
+    z-index: -1;
+    top: -20%;
+    left: 72%;
+    animation: circle 10s infinite linear forwards;
+    transition: all 1s;
+}
+@keyframes circle
+{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.main-left
+{
+    box-sizing: border-box;
+    padding-left: 60px;
+    height: 80%;
+    display: grid;
+    align-content: space-between;
+}
+.main-left>h1
+{
+    font-size: 2.5em;
+    font-weight: 900;
+}
+.main-right
+{
+    position: relative;
+    overflow: hidden;
+    height: 70%;
+}
+.main-right img
+{
+    position: absolute;
+    animation: pic 1s ease-in forwards;
+    transition: all 1s;
+}
+@keyframes pic 
+{
+    from{left: 130%; opacity: 1;}
+    to{left: -10%; opacity: 1; transition: 1s;}
+}
+
+/* Testimonial css */
+
+.testimonial 
+{
+    width: 100%;
+    height: 80vh;
+    background: #FFF0DE;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.testimonial>i
+{
+    position: absolute;
+    z-index: 1;
+    right: 10%;
+    top: 50%;
+}
+.testimonial-details
+{
+    display:grid;
+    align-content: space-around;
+    justify-items: center;
+    width: 80%;
+    height: 50%;
+}
+.testimonial-details img
+{
+    border-radius: 50%;
+}
+.testimonial-details >p
+{
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    font-size: 1.2em;
+}
+.testimonial-details > h4
+{
+    font-size: 1.3em;
+}
+.testimonial-details > small
+{
+    font-size: .9em;
+}
+.testimonial>i
+{
+    font-size: 4em;
+}
+.testimonial .fa-chevron-left
+{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+}
+.testimonial .fa-chevron-right
+{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+}
+
+/* Team css */
+
+.team
+{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-content: space-evenly;
+    justify-items: center;
+}
+.team>h1{
+    font-size: 3em;
+    font-weight: 900;
+}
+.team-inner
+{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.team-box img{
+    width: 100%;
+    height: 100%;
+}
+.team-box
+{
+    overflow: hidden;
+    position: relative;
+}
+.overlay::before
+{
+    content: '';   
+    box-sizing: border-box;
+    position: absolute;
+    height: 70%;
+    width: 150%;
+    left: -30%;
+    bottom: -20%;
+    background: rgba(255,255,255,.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+.team-box:hover .overlay::before
+{
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(15deg);
+}
+.overlay-details, .social-icons
+{
+    position: absolute;
+    z-index: 2;
+}
+.overlay-details
+{
+    opacity: 0;
+    top: 60%;
+    left: -50%;
+}
+.social-icons
+{
+    opacity: 0;
+    bottom: -10%;
+    left: 10%;
+    
+}
+.team-box:hover .overlay-details
+{
+    opacity: 1;
+    left: 10%;
+    transition: all 1s;
+}
+.team-box:hover .social-icons
+{
+    opacity: 1;
+    bottom: 10%;
+    transition: all 1s;
+}
+
+/* image-carosla css */
+.image-carosal
+{
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+/* Footer css */
+.footer
+{
+   display: grid;
+   height: 40vh;
+   grid-template-rows: repeat(3, 7vh);
+   justify-items: center;
+   align-content: center;
+   /* border: 1px solid; */
+}
+.logo1
+{
+    width: 30%;
+    display: flex;
+    justify-content:center ;
+}
+.logo1 img
+{
+    width: 40%;
+    height: 70%;
+}
+.icons
+{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.footer p
+{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
